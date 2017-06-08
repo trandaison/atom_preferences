@@ -34,7 +34,13 @@
     """
   'render js: "alert(true)"':
     'prefix': 'renderjs'
-    'body': 'render js: "alert(true);"'
+    'body': 'render js: "${1:alert(true);}"'
+  'current_user':
+    'prefix': 'currentuser'
+    'body': 'current_${1:user}$2'
+  'Settings.constant':
+    'prefix': 'sett'
+    'body': 'Settings.'
 
 '.text.html.erb':
   'if statement':
@@ -73,6 +79,30 @@
   'id: "erb-id"':
     'prefix': 'id'
     'body': 'id: "$1"'
+  '<%= link_to %>':
+    'prefix': 'linkto'
+    'body': '<%= link_to ${1:text}, ${2:resource}_path %>'
+  '<%= link_to ... do %>':
+    'prefix': 'linktodo'
+    'body': """
+      <%= link_to ${1:resource}_path do %>
+      <% end %>
+    """
+  '<%= render @resources %>':
+    'prefix': 'rend'
+    'body': '<%= render @${1:resources} %>'
+  '<%= render "partial" %>':
+    'prefix': 'renderp'
+    'body': '<%= render "${1:partial}" %>'
+  '<%= t("language") %>':
+    'prefix': 'trans'
+    'body': '<%= t "${1}" %>'
+  '<%= t(".key") %>':
+    'prefix': 'trans.'
+    'body': '<%= t ".${1}" %>'
+  '<%= binding.pry %>':
+    'prefix': 'pr='
+    'body': '<%= binding.pry %>'
 
 '.text.js.erb':
   'if statement':

@@ -1,32 +1,25 @@
 "*":
-  "atom-beautify":
-    coffeescript:
-      indent_size: 2
-    erb:
-      indent_size: 2
-    general:
-      _analyticsUserId: "aed5cca5-f5dd-424a-8364-f556f85c4de9"
-    html:
-      indent_size: 2
-    js:
-      indent_size: 2
-    json:
-      indent_size: 2
-    ruby:
-      indent_size: 2
-    scss:
-      indent_size: 2
+  "autohide-tree-view":
+    hideDelay: 2000
+    pushEditor: true
+    showDelay: 50
+  "color-picker":
+    automaticReplace: true
   core:
     destroyEmptyPanes: false
+    excludeVcsIgnoredPaths: false
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "chester-atom-2-syntax"
     ]
   editor:
-    invisibles: {}
-    lineHeight: 1.8
+    lineHeight: 2.3
   "exception-reporting":
-    userId: "c7d3b42c-7c80-8dc2-0cc9-92052e69d305"
+    userId: "9e834b7f-be3a-4962-9369-5fc1a1046806"
+  "git-blame":
+    columnWidth: 300
+  "linter-ui-default":
+    panelHeight: 69
   welcome:
     showOnStartup: false

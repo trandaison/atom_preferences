@@ -1,0 +1,22 @@
+"*":
+  core:
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "tabs-to-spaces"
+    ]
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "chester-atom-2-syntax"
+    ]
+  editor:
+    lineHeight: 2.2
+  "exception-reporting":
+    userId: "d1feafee-f3bd-4b2f-9f20-d1d162256130"
+  "git-blame":
+    columnWidth: 300
+  "tabs-to-spaces":
+    onSave: "tabify"
+  welcome:
+    showOnStartup: false

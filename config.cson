@@ -1,0 +1,45 @@
+"*":
+  "autohide-tree-view":
+    hideDelay: 2000
+    pushEditor: true
+    showDelay: 50
+  "color-picker":
+    automaticReplace: true
+  core:
+    debugLSP: true
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "atom-ide-ui"
+    ]
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "chester-atom-2-syntax"
+    ]
+  editor:
+    lineHeight: 2.3
+    tabType: "soft"
+  "exception-reporting":
+    userId: "cfc49941-f949-4023-9765-bdddbd3085e2"
+  "git-blame":
+    columnWidth: 300
+  "highlight-selected":
+    lightTheme: true
+  "linter-eslint":
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
+  "linter-ruby":
+    rubyExecutablePath: "/Users/framgia/.rbenv/shims/ruby"
+  "linter-ui-default": {}
+  "tree-view":
+    autoReveal: true
+    hideVcsIgnoredFiles: false
+  welcome:
+    showOnStartup: false

@@ -1,0 +1,202 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.ruby':
+  'Redirect to':
+    'prefix': 'redi'
+    'body': "redirect_to ${1:some}_path"
+  'flash[:key] = value':
+    'prefix': 'flash'
+    'body': 'flash[${1::success}] = ${2:"Created successfully."}'
+  'render json':
+    'prefix': 'renjson'
+    'body': """
+      render json: {${1::${2:key}: "${3:value}"}}, ${4:status: ${5:200}}
+    """
+  'render js: "alert(true)"':
+    'prefix': 'renderjs'
+    'body': 'render js: "${1:alert(true);}"'
+  'current_user':
+    'prefix': 'currentuser'
+    'body': 'current_${1:user}$2'
+  'Settings.constant':
+    'prefix': 'sett'
+    'body': 'Settings.'
+  'rspec context do ... end':
+    'prefix': 'context'
+    'body': """
+      context "$1" do
+        $2
+      end
+    """
+  'rspec describe do ... end':
+    'prefix': 'describe'
+    'body': """
+      describe "$1" do
+        $2
+      end
+    """
+
+'.text.html.erb':
+  'if statement':
+    'prefix': 'if'
+    'body': """
+      <% if ${1:true} %>
+        ${2:<!--true-->}
+      <% end %>
+    """
+  'if - else statement':
+    'prefix': 'ife'
+    'body': """
+      <% if ${1:true} %>
+        ${2:<!--true-->}
+      <% else %>
+        ${3:<!-- false -->}
+      <% end %>
+    """
+  'unless statement':
+    'prefix': 'unless'
+    'body': """
+      <% unless ${1:false} %>
+        ${2:<!--true-->}
+      <% end %>
+    """
+  'class: "erb-class"':
+    'prefix': 'cla'
+    'body': 'class: "$1"'
+  'id: "erb-id"':
+    'prefix': 'id'
+    'body': 'id: "$1"'
+  '<%= link_to %>':
+    'prefix': 'linkto'
+    'body': '<%= link_to ${1:text}, ${2:resource}_path %>'
+  '<%= link_to ... do %>':
+    'prefix': 'linktodo'
+    'body': """
+      <%= link_to ${1:resource}_path do %>
+      <% end %>
+    """
+  '<%= render @resources %>':
+    'prefix': 'rend'
+    'body': '<%= render @${1:resources} %>'
+  '<%= render "partial" %>':
+    'prefix': 'renderp'
+    'body': '<%= render "${1:partial}" %>'
+  '<%= t("language") %>':
+    'prefix': 'trans'
+    'body': '<%= t "${1}" %>'
+  '<%= t(".key") %>':
+    'prefix': 'trans.'
+    'body': '<%= t ".${1}" %>'
+  '<%= binding.pry %>':
+    'prefix': 'pr='
+    'body': '<%= binding.pry %>'
+  '<% end %>':
+    'prefix': 'end'
+    'body': '<% end %>'
+
+'.text.js.erb':
+  'if statement':
+    'prefix': '-if'
+    'body': """
+      <% if ${1:true} %>
+        ${2:<!--true-->}
+      <% end %>
+    """
+  'if - else statement':
+    'prefix': '-ife'
+    'body': """
+      <% if ${1:true} %>
+        ${2:<!--true-->}
+      <% else %>
+        ${3:<!-- false -->}
+      <% end %>
+    """
+  'unless statement':
+    'prefix': '-unless'
+    'body': """
+      <% unless ${1:false} %>
+        ${2:<!--true-->}
+      <% end %>
+    """
+  'function':
+    'prefix': 'function'
+    'body': """
+      function($1) {
+        ${2:#code block}
+      }
+    """
+
+'.source.js':
+  'function nameless':
+    'prefix': 'func'
+    'body': """
+      function($1) {
+        $2
+      }
+    """
+  'export default':
+    'prefix': 'exp'
+    'body': """
+      export default $1;
+    """
+  'export const':
+    'prefix': 'export'
+    'body': """
+      export const ${1:CONST} = ${2};
+    """
+  'console log with text':
+    'prefix': "log2"
+    'body': "console.log('${1:key}', $1);  // eslint-disable-line"
+  'describe test':
+    'prefix': 'desc'
+    'body': """
+      describe('$1', () => {
+        $2
+      });
+    """
+  'it test':
+    'prefix': 'it'
+    'body': """
+      it('${1:should}', () => {
+        $2
+      });
+    """
+  'expect()':
+    'prefix': 'expect'
+    'body': """
+      expect(${1});
+    """
+  'no lint':
+    'prefix': 'nolint'
+    'body': '// eslint-disable-line'
+
+'.html.vue':
+  'custom tag full':
+    'prefix': "tag"
+    'body': "<$1></$1>"
+  'custom tag':
+    'prefix': "ta/"
+    'body': "<$1/>"
+  'console log with text':
+    'prefix': "log2"
+    'body': "console.log('${1:key}', $1)"
